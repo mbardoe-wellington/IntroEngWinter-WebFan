@@ -27,8 +27,9 @@ def set_speed(percent):
     
 # ---- Wi-Fi Access Point ----
 ap = network.WLAN(network.AP_IF)
+### IMPORTANT!!! Pick your own ssid!!!! Something like PICO-FAN-YOUR-NAME.
+ap.config(ssid="PICO-FAN", password="pico1234")
 ap.active(True)
-ap.config(essid="PICO-FAN", password="pico1234")
 print("AP IP:", ap.ifconfig()[0])
 
 # ---- HTML page ----
